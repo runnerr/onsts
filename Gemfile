@@ -42,3 +42,25 @@ gem 'jbuilder', '~> 1.2'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass', '>= 3.0.0.0'
+gem 'devise'
+gem 'devise_invitable'
+gem 'figaro'
+gem 'haml-rails'
+gem 'puma'
+gem 'simple_form'
+
+group :development do
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'rails_layout'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', :require=>false
+  gem 'database_cleaner', '1.0.1'
+  gem 'launchy'
+end
+
