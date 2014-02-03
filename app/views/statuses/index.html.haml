@@ -1,0 +1,20 @@
+.page-header
+  = link_to new_status_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Status
+  %h1 Listing statuses
+
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th #
+        %th Title
+        %th Action
+        
+    %tbody
+      - @statuses.each_with_index do |status, i|
+        %tr
+          %td= i+1
+          %td= link_to status.title, edit_status_path(status)
+          %td= link_to 'Destroy', status, :data => { confirm: 'Are you sure?' }, :method => :delete

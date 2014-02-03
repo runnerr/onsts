@@ -1,0 +1,18 @@
+.page-header
+  = link_to tickets_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_ticket_path(@ticket), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show ticket
+
+%dl.dl-horizontal
+  %dt Category:
+  %dd= @ticket.category_id
+  %dt Question:
+  %dd= @ticket.question
+  %dt Name:
+  %dd= @ticket.name
+  %dt Email:
+  %dd= @ticket.email

@@ -1,5 +1,11 @@
 Onsts::Application.routes.draw do
-  root :to => "home#index"
+  resources :categories
+
+  resources :statuses
+
+  resources :tickets
+
+  root :to => "tickets#new"
   devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users
 end

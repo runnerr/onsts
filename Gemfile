@@ -15,6 +15,8 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'puma'
 gem 'simple_form'
+gem 'bootstrap-generators', '~> 3.1.0'
+
 group :development do
   gem 'html2haml'
   gem 'hub', :require=>nil
